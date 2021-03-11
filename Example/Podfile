@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'AiLevelTestSFKit_Example' do
+  pod 'AiLevelTestSFKit', :path => '../'
+
+  target 'AiLevelTestSFKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

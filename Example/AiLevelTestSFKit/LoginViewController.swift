@@ -7,14 +7,16 @@
 
 import UIKit
 
-import AiLevelTestKit
+import AiLevelTestSFKit
 
 class LoginViewController: UIViewController {
     @IBOutlet var _labelGroupCode: UILabel!
     @IBOutlet var _labelId: UILabel!
+    @IBOutlet var _labelExamId: UILabel!
     
     @IBOutlet var _textfieldGroupCode: UITextField!
     @IBOutlet var _textfieldId: UITextField!
+    @IBOutlet var _textfieldExamId: UITextField!
     
     @IBOutlet var _buttonStart: UIButton!
     
@@ -44,15 +46,14 @@ class LoginViewController: UIViewController {
         // ** 레벨테스트 활성화. AiLevelTestKit.shared.activate
         // groupCode : 할당받은 그룹코드
         // email : 이메일
-        // themeColour : 테마 색상
-        // completion(code, errMessage) : 활성화 작업 완료 후 callback
-        //      code : (ALTResponseCode)    Succeed : 활성화 성공
-        //                                  Failed : 활성화 실패
-        //                                  Unknown : 활성화 실패 (알 수 없음)
+        // examId : 시험 아이디
+        // completion(isSucceed, errMessage) : 활성화 작업 완료 후 callback
+        //      isSucceed : Bool    true : 활성화 성공
+        //                          false : 활성화 실패
         //      errMessage : (String?) :  에러메세지
         
-        AiLevelTestKit.shared.activate(groupCode: _textfieldGroupCode.text ?? "", email: _textfieldId.text ?? "", themeColour: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)) { [weak self] (code, errMessage) in
-            guard code == .Succeed else {
+        AiLevelTestSFKit.shared.activate(groupCode: _textfieldGroupCode.text ?? "", email: _textfieldExamId.text ?? "", examId: _textfieldId.text ?? "") { [weak self] (isSucceed, errMessage) in
+            guard isSucceed else {
                 // 초기화 실패시 실패 사유를 alert으로 보여준다
                 
                 let alertController = UIAlertController(title: errMessage, message: nil, preferredStyle: .alert)

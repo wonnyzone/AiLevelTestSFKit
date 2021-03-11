@@ -7,7 +7,7 @@
 
 import UIKit
 
-import AiLevelTestKit
+import AiLevelTestSFKit
 
 class TestListViewController: UIViewController {
     override func viewDidLoad() {
@@ -31,7 +31,6 @@ class TestListViewController: UIViewController {
     }
     
     @objc private func pressedButton(_ button: UIButton) {
-        AiLevelTestKit.shared.startTestWith(id: "57000", from: self)
-//        AiLevelTestKit.shared.startTest(from: self, withId: "examId")
+        AiLevelTestSFKit.shared.startTest(from: self)
     }
 }

@@ -336,7 +336,7 @@ class QHttpClient: NSObject {
             var responseData: Any?
             if responseString != nil {
                 if let jsonData = try? responseString?.data(using: .utf8) {
-                    responseData = try? JSONSerialization.jsonObject(with: jsonData, options: [])
+                    responseData = try? JSONSerialization.jsonObject(with: jsonData!, options: [])
                 }
                 
                 if let httpResponse = response as? HTTPURLResponse {

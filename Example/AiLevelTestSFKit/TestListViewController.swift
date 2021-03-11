@@ -15,6 +15,8 @@ class TestListViewController: UIViewController {
         
         self.title = "테스트 리스트"
         
+        self.view.backgroundColor = .white
+        
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .red

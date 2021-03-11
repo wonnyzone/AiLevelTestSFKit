@@ -58,6 +58,8 @@ public class AiLevelTestSFKit: NSObject {
         
         let urlString = RequestUrl.serviceUrl + "?code=\(mGroupCode)&email=\(mEmail)&exam_id=\(mExamId)"
         
+        print(urlString)
+        
         guard let url = URL(string: urlString) else {
             print("서비스URL을 생성할 수 없습니다.")
             return

@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
         //                          false : 활성화 실패
         //      errMessage : (String?) :  에러메세지
         
-        AiLevelTestSFKit.shared.activate(groupCode: _textfieldGroupCode.text ?? "", email: _textfieldExamId.text ?? "", examId: _textfieldId.text ?? "") { [weak self] (isSucceed, errMessage) in
+        AiLevelTestSFKit.shared.activate(groupCode: _textfieldGroupCode.text ?? "", email: _textfieldId.text ?? "", examId: _textfieldExamId.text ?? "") { [weak self] (isSucceed, errMessage) in
             guard isSucceed else {
                 // 초기화 실패시 실패 사유를 alert으로 보여준다
                 

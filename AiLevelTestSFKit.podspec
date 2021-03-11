@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = 'AiLevelTestKit based on Safari browser for iOS'
 
-  s.homepage         = 'https://github.com/jk-gna/AiLevelTestSFKit'
+  s.homepage         = 'http://aileveltest.co.kr'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jk-gna' => 'junq.jeon@gmail.com' }
